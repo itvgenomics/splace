@@ -94,7 +94,45 @@
 - [Contact](#contact)
 
 ***
+## ⚠️ Windows Security and Digital Signature
+
+### Running SPLACE on managed or corporate Windows computers
+
+The Windows version of **SPLACE Desktop** is currently distributed without a commercial code-signing certificate.
+
+Because of this, Windows may display a security warning when the application is launched. On personal computers, Windows usually allows the user to manually authorize the application. However, on computers managed by companies, universities, research institutions, or other organizations, security policies may completely prevent unsigned applications from running.
+
+This behavior may be caused by Windows security mechanisms or organizational policies such as **Microsoft Defender SmartScreen**, **AppLocker**, or **Windows Defender Application Control (WDAC)**.
+
+In these environments, SPLACE may:
+
+* Be blocked before execution.
+* Display a message indicating that the application is from an unknown publisher.
+* Be prevented from running even when the user has administrator privileges.
+* Require authorization from the organization's IT department.
+
+> [!IMPORTANT]
+> This does not necessarily indicate a problem with the SPLACE installation or executable. It may simply mean that the computer's security policy does not allow applications without a trusted digital signature.
+
+### Recommended alternative: Windows Subsystem for Linux (WSL)
+
+If the Windows executable is blocked by your organization's security policy, we recommend running **SPLACE through Windows Subsystem for Linux (WSL)**.
+
+WSL provides a Linux environment directly within Windows and can be used to run the Linux version of SPLACE without relying on the unsigned Windows executable.
+
+For Windows 11 systems with **WSLg** enabled, graphical Linux applications can also be displayed directly on the Windows desktop.
+
+Before using this alternative, verify that WSL is available and permitted by your organization's IT policies.
+
+### For corporate or institutional environments
+
+If installation of unsigned software is restricted, you may also contact your IT department and request authorization to run SPLACE.
+
+Future Windows releases may be digitally signed to improve compatibility with Windows security policies and managed corporate environments.
+
+***
 &nbsp;
+
 ## System Overview
 ##### [:rocket: Go to Contents Overview](#contents-overview)
 **SPLACE** is a comprehensive Python toolkit designated to automate phylogenomic analysis pipelines. It handles gene splitting, alignment, trimming, and concatenation, and now supports direct phylogenetic tree inference.

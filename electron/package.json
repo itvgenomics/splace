@@ -23,6 +23,9 @@
   "build": {
     "appId": "io.github.luanrabelo.splace",
     "productName": "SPLACE",
+    "toolsets": {
+      "appimage": "1.0.3"
+    },
     "directories": {
       "output": "dist"
     },
@@ -67,13 +70,13 @@
     },
     "linux": {
       "target": [
-        {
-          "target": "AppImage",
-          "arch": [
-            "x64"
-          ]
-        }
+        "AppImage",
+        "deb"
       ],
+      "appImage": {
+        "compression": "zstd"
+      },
+      "category": "Science",
       "icon": "../docs/assets/SPLACE.png"
     }
   },
