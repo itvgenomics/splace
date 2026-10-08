@@ -888,7 +888,7 @@ cd SPLACE
 2. Create and activate the environment:
 ```shell
 conda env create -f environment.yml
-conda activate splace
+conda activate splace_env
 ```
 
 #### Pip
